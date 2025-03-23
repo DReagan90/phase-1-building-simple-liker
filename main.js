@@ -2,7 +2,23 @@
 const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
-// Your JavaScript code goes here!
+
+
+
+describe("main.js", () => {
+  it("contains a hidden modal", (done) => {
+    // Simulate the modal presence in the DOM
+    let modal = document.querySelector('.hidden');
+    
+    // If modal is not found immediately, wait a little and try again
+    setTimeout(() => {
+      modal = document.querySelector('.hidden');
+      expect(modal).to.not.equal(null);
+      done();
+    }, 100); // Adjust time if necessary
+  });
+});
+
 
 
 
